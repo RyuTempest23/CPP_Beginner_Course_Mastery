@@ -47,7 +47,7 @@ void title(string &str) {
 string input_str(const string &text) {
     string str;
     std::cout << text;
-    std::cin >> str;
+    std::getline(std::cin, str);
     return str;
 }
 
@@ -60,7 +60,7 @@ int input_int(const string &text) {
 }
 
 // Returns a double input value.
-int input_double(const string &text) {
+double input_double(const string &text) {
     double num;
     std::cout << text;
     std::cin >> num;
