@@ -9,7 +9,7 @@ int main() {
     std::cout << "- 1/2 cup soy sauce\n";
     std::cout << "- 1/2 cup vinegar\n";
     std::cout << "- 1 cup water\n";
-    std::cout << "- 1 whole garlic jead (crushed)\n";
+    std::cout << "- 1 whole garlic head (crushed)\n";
     std::cout << "- 1 medium onion (sliced)\n";
     std::cout << "- 2-3 bay leaves\n";
     std::cout << "- 1 teaspoon whole black peppercorns\n";
@@ -28,7 +28,7 @@ int main() {
     std::cout << "8. Add sugar if desired and adjust seasoning to taste.\n";
     std::cout << "9. Simmer uncovered for a few more minutes to slightly thicken the sauce.\n";
     std::cout << "10. Serve hot with rice.\n";
-
+    
     keep_window_open();
     return 0;
 }
