@@ -32,27 +32,27 @@ void upper(string &str) {
 
 // Convert any strings to titlecase (example:  i love you -> I Love You).
 void title(string &str) {
-    bool capitaize_next = true;
+    bool capitalize_next = true;
     for (char &c : str) {
-        if (capitaize_next) {
+        if (capitalize_next) {
             c = std::toupper((unsigned char)c);
-            capitaize_next = false;
+            capitalize_next = false;
         } else {
             c = std::tolower((unsigned char)c);
         }
     }
 }
 
-// Returna a string input value.
-string inpute_str(const string &text) {
+// Returns a string input value.
+string input_str(const string &text) {
     string str;
-    std::cout << str;
+    std::cout << text;
     std::cin >> str;
     return str;
 }
 
 // Returns an integer input value.
-int inpute_int(const string &text) {
+int input_int(const string &text) {
     int num;
     std::cout << text;
     std::cin >> num;
@@ -60,7 +60,7 @@ int inpute_int(const string &text) {
 }
 
 // Returns a double input value.
-int inpute_double(const string &text) {
+int input_double(const string &text) {
     double num;
     std::cout << text;
     std::cin >> num;
@@ -68,7 +68,7 @@ int inpute_double(const string &text) {
 }
 
 // Returns a character input value.
-char inpute_char(const string &text) {
+char input_char(const string &text) {
     char ch;
     std::cout << text;
     std::cin >> ch;
@@ -77,7 +77,7 @@ char inpute_char(const string &text) {
 
 // Prompts the user to try again or not.
 bool try_again() {
-    char c = inpute_char("Do you want to try again [y/n]?: ");
+    char c = input_char("Do you want to try again [y/n]?: ");
     return c == 'y' || c == 'Y';
 }
 
