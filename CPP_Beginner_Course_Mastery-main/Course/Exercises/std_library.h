@@ -87,3 +87,10 @@ int get_max(int num1, int num2) {
 int get_min(int num1, int num2) {
     return num1 < num2 ? num1 : num2; 
 }
+
+// Sets the precision of decimal places of a double variable.
+std::string decimal_precision(double num, int precision) {
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(precision) << num;
+    return oss.str();
+}
