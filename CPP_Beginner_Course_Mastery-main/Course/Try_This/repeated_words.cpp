@@ -5,15 +5,14 @@ int main() {
     string previous_word = "";
 
     std::cout << "Please enter any word or enter q to quit.\n";
+
     while (std::cin >> current_word) {
         if (current_word == "q") {
             break;
         }
-
         if (previous_word == current_word) {
             std::cout << "Repeated word: " << current_word << "\n";
         }
-        
         previous_word = current_word;
     }
 
