@@ -16,8 +16,8 @@ int main() {
     // variables
     int age;
     char gender;
-    string first_name;
-    string friend_name;
+    std::string first_name;
+    std::string friend_name;
 
     // Prompt for the recipient's first name
     std::cout << "Please enter your first name: ";

@@ -1,8 +1,8 @@
 #include "std_library.h"
 
 int main() {
-    string current_word;
-    string previous_word = "";
+    std::string current_word;
+    std::string previous_word = "";
 
     std::cout << "Please enter any word or enter q to quit.\n";
 

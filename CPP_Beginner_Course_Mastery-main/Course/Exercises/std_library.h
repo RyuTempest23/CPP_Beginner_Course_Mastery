@@ -7,9 +7,6 @@
 #include <iomanip>
 #include <algorithm>
 
-using std::string;
-using std::vector;
-
 // Keep the console window open until the user press any key.
 void keep_window_open() {
     std::cout << std::endl;
@@ -17,21 +14,21 @@ void keep_window_open() {
 }
 
 // Convert any strings to lowercase letters.
-void lower(string &str) {
+void lower(std::string &str) {
     for (char &c : str) {
         c = std::tolower((unsigned char)c);
     }
 }
 
 // Convert any strings to uppercase letters.
-void upper(string &str) {
+void upper(std::string &str) {
     for (char &c : str) {
         c = std::toupper((unsigned char)c);
     }
 }
 
 // Convert any strings to titlecase (example:  i love you -> I Love You).
-void title(string &str) {
+void title(std::string &str) {
     bool capitalize_next = true;
     for (char &c : str) {
         if (capitalize_next) {
@@ -44,15 +41,15 @@ void title(string &str) {
 }
 
 // Returns a string input value.
-string input_str(const string &text) {
-    string str;
+std::string input_str(const std::string &text) {
+    std::string str;
     std::cout << text;
     std::getline(std::cin, str);
     return str;
 }
 
 // Returns an integer input value.
-int input_int(const string &text) {
+int input_int(const std::string &text) {
     int num;
     std::cout << text;
     std::cin >> num;
@@ -60,7 +57,7 @@ int input_int(const string &text) {
 }
 
 // Returns a double input value.
-double input_double(const string &text) {
+double input_double(const std::string &text) {
     double num;
     std::cout << text;
     std::cin >> num;
@@ -68,7 +65,7 @@ double input_double(const string &text) {
 }
 
 // Returns a character input value.
-char input_char(const string &text) {
+char input_char(const std::string &text) {
     char ch;
     std::cout << text;
     std::cin >> ch;
