@@ -5,6 +5,7 @@
 #include <cmath>
 #include <cctype>
 #include <iomanip>
+#include <numeric>
 #include <algorithm>
 
 // Keep the console window open until the user press any key.
