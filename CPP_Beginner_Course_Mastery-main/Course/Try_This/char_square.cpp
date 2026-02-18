@@ -3,18 +3,14 @@
 int main() {
     // TODO: write out a table of characters with their corresponding integer values.
 
-    char c = 'A';
-    // output big characters
-    while (c <= 'Z') {
-        std::cout << c << "\t" << int(c) << "\n";
-        c++;
+    // big characters
+    for (int i = 0; i < 26; i++) {
+        std::cout << char('A' + i) << "\t" << int('A' + i) << "\n";
     }
-    
-    c = 'a';
-    // output small characters
-    while (c <= 'z') {
-        std::cout << c << "\t" << int(c) << "\n";
-        c++;
+
+    // small characters
+    for (int i = 0; i < 26; i++) {
+        std::cout << char('a' + i) << "\t" << int('a' + i) << "\n";
     }
 
     keep_window_open();
