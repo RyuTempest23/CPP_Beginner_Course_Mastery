@@ -6,6 +6,7 @@
 #include <cctype>
 #include <iomanip>
 #include <algorithm>
+#include <unordered_map>
 
 // Keep the console window open until the user press any key.
 void keep_window_open() {

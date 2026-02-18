@@ -1,35 +1,62 @@
 #include "std_library.h"
 
+enum class Unit { yen, euro, pound, yuan, kroner };
+
 int main() {
-    // TODO: write a program that converts yen, euros, and pounds into dollars.
+    // TODO: write a program that converts yen, euros, pounds, yuan, and kroner into dollars.
 
-    double amount;
+    // Make a dictionary for the currency with key-values.
+    std::unordered_map<std::string, Unit> currencyMap = {
+        {"yen", Unit::yen},
+        {"euro", Unit::euro},
+        {"pound", Unit::pound},
+        {"yuan", Unit::yuan},
+        {"kroner", Unit::kroner}
+    };
+
     std::string currency;
-    std::string yenUnit = "JPY";
-    std::string euroUnit = "EUR";
-    std::string poundUnit = "GBP";
+    double amount, dollars;
 
-    std::cout << "Enter the currency (yen, euro, pound): ";
-    std::cin >> currency;
+    std::cout << "Enter the amount and currency (yen, euro, pound, yuan, kroner): ";
+    std::cin >> amount >> currency;
 
-    std::cout << "Enter the amount: ";
-    std::cin >> amount;
-
+    // make the currency value lowercase.
     lower(currency);
 
-    // currency to dollar
-    double yenDollar = amount / 153.83;    
-    double euroDollar = amount / 1.1820;    
-    double poundDollar = amount / 1.3551;    
-
-    if (currency == "yen") {
-        std::cout << amount << " " << yenUnit << " == " << yenDollar << (yenDollar > 1 ? " dollars" : " dollar");
-    } else if (currency == "euro") {
-        std::cout << amount << " " << euroUnit << " == " << euroDollar << (euroDollar > 1 ? " dollars" : " dollar");       
-    } else if (currency == "pound") {
-        std::cout << amount << " " << poundUnit << " == " << poundDollar << (poundDollar > 1 ? " dollars" : " dollar");
+    // Check if the key is in the dictionary, if not end the program.
+    if (currencyMap.find(currency) == currencyMap.end()) {
+        std::cout << "Invalid currency!\n";
+        keep_window_open();
+        return 0;
     }
-    std::cout << "\n";
+
+    // after successfully finding the key, assign the value with that key.
+    Unit unit = currencyMap[currency];
+
+    // switch statement is just like if-else statements
+    switch (unit) {
+        case Unit::yen:
+            dollars = amount * 0.0065;
+            break;
+            
+        case Unit::euro:
+            dollars = amount * 1820;
+            break;
+
+        case Unit::pound:
+            dollars = amount * 1.3551;
+            break;
+
+        case Unit::yuan:
+            dollars = amount * 0.1447;
+            break;
+
+        case Unit::kroner:
+            dollars = amount * 0.1586;
+            break;
+    }
+
+    std::cout << amount << " " << currency << " == " << dollars << " USD\n";
 
     keep_window_open();
     return 0;
